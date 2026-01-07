@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    min-height: 100vh;
+    background-image: url('../assets/ui/background-quests.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1a1410;
+    color: #e8d5a8;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(42, 28, 20, 0.95) 0px,
+            rgba(42, 28, 20, 0.95) 2px,
+            rgba(26, 18, 12, 0.95) 2px,
+            rgba(26, 18, 12, 0.95) 4px
+        );
+    border: 8px solid;
+    border-image: repeating-linear-gradient(
+        45deg,
+        #5a4a3a 0px,
+        #5a4a3a 8px,
+        #8b7355 8px,
+        #8b7355 16px
+    ) 8;
+    box-shadow: 
+        0 0 0 4px #2a1e14,
+        0 0 0 8px #8b7355,
+        0 0 0 12px #2a1e14,
+        8px 8px 0 0 rgba(0, 0, 0, 0.5),
+        16px 16px 0 0 rgba(0, 0, 0, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.8);
+    padding: 0;
+    animation: containerFadeIn 0.8s ease;
+}
+
+.header {
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            #3a2818 0px,
+            #3a2818 4px,
+            #2a1e14 4px,
+            #2a1e14 8px
+        );
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 8px solid;
+    border-image: repeating-linear-gradient(
+        90deg,
+        #8b7355 0px,
+        #8b7355 16px,
+        #d4a574 16px,
+        #d4a574 32px
+    ) 8;
+    position: relative;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #ffd966;
+    text-shadow: 
+        4px 4px 0 #3a2818,
+        8px 8px 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.subtitle {
+    font-size: 0.65rem;
+    color: #d4a574;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+#characterClass {
+    color: #ffd966;
+    font-weight: bold;
+}
+
+.main {
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    color: #ffd966;
+    margin-bottom: 1.5rem;
+    text-shadow: 
+        2px 2px 0 #3a2818,
+        4px 4px 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.add-quest-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(26, 18, 12, 0.8) 0px,
+            rgba(26, 18, 12, 0.8) 2px,
+            rgba(42, 28, 20, 0.6) 2px,
+            rgba(42, 28, 20, 0.6) 4px
+        );
+    border: 6px solid #5a4a3a;
+    box-shadow: 
+        inset 4px 4px 0 0 rgba(0, 0, 0, 0.5),
+        inset -4px -4px 0 0 rgba(139, 115, 85, 0.3),
+        4px 4px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.quest-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.quest-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    background: #1a1410;
+    color: #e8d5a8;
+    border: 4px solid #3a2818;
+    outline: none;
+    transition: all 0.1s ease;
+    box-shadow: 
+        inset 4px 4px 0 0 rgba(0, 0, 0, 0.6),
+        inset -2px -2px 0 0 rgba(139, 115, 85, 0.2);
+    line-height: 1.6;
+}
+
+.quest-input::placeholder {
+    color: #6a5a4a;
+}
+
+.quest-input:focus {
+    border-color: #8b7355;
+    box-shadow: 
+        inset 4px 4px 0 0 rgba(0, 0, 0, 0.6),
+        inset -2px -2px 0 0 rgba(139, 115, 85, 0.3),
+        0 0 0 4px rgba(139, 115, 85, 0.5);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border: 4px solid;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.btn:active {
+    transform: translate(4px, 4px);
+}
+
+.btn-add {
+    background: #6b8e23;
+    border-color: #3a4a1a;
+    color: #fff;
+    box-shadow: 
+        4px 4px 0 0 #3a4a1a,
+        8px 8px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-add:hover {
+    background: #7ea82f;
+}
+
+.btn-add:active {
+    box-shadow: 
+        2px 2px 0 0 #3a4a1a,
+        4px 4px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-complete {
+    background: #4a7c59;
+    border-color: #1a3a28;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    font-size: 0.6rem;
+    box-shadow: 
+        4px 4px 0 0 #1a3a28,
+        6px 6px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-complete:hover {
+    background: #5a8c69;
+}
+
+.btn-complete:active {
+    box-shadow: 
+        2px 2px 0 0 #1a3a28,
+        3px 3px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-complete:disabled {
+    background: #4a4a4a;
+    border-color: #2a2a2a;
+    color: #8a8a8a;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: 
+        2px 2px 0 0 #2a2a2a,
+        4px 4px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-delete {
+    background: #a84442;
+    border-color: #5a1a1a;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    font-size: 0.6rem;
+    box-shadow: 
+        4px 4px 0 0 #5a1a1a,
+        6px 6px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-delete:hover {
+    background: #c85452;
+}
+
+.btn-delete:active {
+    box-shadow: 
+        2px 2px 0 0 #5a1a1a,
+        3px 3px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.quest-list-section {
+    padding: 1.5rem;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(26, 18, 12, 0.8) 0px,
+            rgba(26, 18, 12, 0.8) 2px,
+            rgba(42, 28, 20, 0.6) 2px,
+            rgba(42, 28, 20, 0.6) 4px
+        );
+    border: 6px solid #5a4a3a;
+    box-shadow: 
+        inset 4px 4px 0 0 rgba(0, 0, 0, 0.5),
+        inset -4px -4px 0 0 rgba(139, 115, 85, 0.3),
+        4px 4px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.quest-list-container {
+    background: #1a1410;
+    border: 4px solid #3a2818;
+    padding: 1rem;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 
+        inset 4px 4px 0 0 rgba(0, 0, 0, 0.7),
+        inset -2px -2px 0 0 rgba(139, 115, 85, 0.2);
+}
+
+/* Scrollbar pixel art estilo retro */
+.quest-list-container::-webkit-scrollbar {
+    width: 20px;
+}
+
+.quest-list-container::-webkit-scrollbar-track {
+    background: #1a1410;
+    border: 4px solid #3a2818;
+}
+
+.quest-list-container::-webkit-scrollbar-thumb {
+    background: #5a4a3a;
+    border: 4px solid #3a2818;
+    box-shadow: inset 2px 2px 0 0 #6a5a4a;
+}
+
+.quest-list-container::-webkit-scrollbar-thumb:hover {
+    background: #6a5a4a;
+}
+
+.quest-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quest-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: #3a2818;
+    border: 4px solid #5a4a3a;
+    border-left: 8px solid #8b7355;
+    transition: all 0.1s ease;
+    animation: questSlideIn 0.3s ease;
+    box-shadow: 
+        4px 4px 0 0 rgba(0, 0, 0, 0.4),
+        inset 2px 2px 0 0 rgba(139, 115, 85, 0.3);
+}
+
+.quest-item:hover {
+    transform: translate(-2px, -2px);
+    border-left-color: #d4a574;
+    box-shadow: 
+        6px 6px 0 0 rgba(0, 0, 0, 0.4),
+        inset 2px 2px 0 0 rgba(212, 165, 116, 0.4);
+}
+
+.quest-item.completed {
+    background: #2a3c2d;
+    border-left-color: #4a7c59;
+    opacity: 0.85;
+}
+
+.quest-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.quest-title {
+    font-size: 0.7rem;
+    color: #e8d5a8;
+    word-wrap: break-word;
+    transition: all 0.3s ease;
+    line-height: 1.8;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.quest-item.completed .quest-title {
+    text-decoration: line-through;
+    color: #8a9a7a;
+}
+
+.quest-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.empty-message {
+    text-align: center;
+    color: #6a5a4a;
+    padding: 3rem 1rem;
+    font-size: 0.65rem;
+    line-height: 2;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.empty-message.hidden {
+    display: none;
+}
+
+.footer {
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            #3a2818 0px,
+            #3a2818 4px,
+            #2a1e14 4px,
+            #2a1e14 8px
+        );
+    padding: 1.5rem 2rem;
+    border-top: 8px solid;
+    border-image: repeating-linear-gradient(
+        90deg,
+        #8b7355 0px,
+        #8b7355 16px,
+        #d4a574 16px,
+        #d4a574 32px
+    ) 8;
+    position: relative;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.5rem;
+    color: #d4a574;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    color: #ffd966;
+    font-weight: bold;
+    text-shadow: 
+        4px 4px 0 #3a2818,
+        8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes questSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        border-width: 4px;
+    }
+
+    .header {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .title {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        font-size: 0.45rem;
+    }
+
+    .main {
+        padding: 1rem 0.8rem;
+    }
+
+    .section-title {
+        font-size: 0.65rem;
+    }
+
+    .add-quest-section,
+    .quest-list-section {
+        padding: 0.8rem;
+    }
+
+    .quest-input {
+        font-size: 0.5rem;
+        padding: 0.7rem;
+    }
+
+    .btn {
+        padding: 0.7rem;
+    }
+
+    .btn-add {
+        font-size: 0.5rem;
+    }
+
+    .quest-list-container {
+        max-height: 350px;
+        padding: 0.8rem;
+    }
+
+    .quest-item {
+        padding: 0.8rem;
+    }
+
+    .quest-title {
+        font-size: 0.55rem;
+    }
+
+    .btn-complete,
+    .btn-delete {
+        font-size: 0.45rem;
+        padding: 0.6rem 0.3rem;
+    }
+
+    .footer {
+        padding: 1rem 0.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.4rem;
+    }
+
+    .stat-value {
+        font-size: 1.1rem;
+    }
+
+    .empty-message {
+        font-size: 0.55rem;
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+

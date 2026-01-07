@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Misiones</title>
+    <link rel="stylesheet" href="quests.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Libro de Misiones</h1>
+            <p class="subtitle">Clase: <span id="characterClass">Aventurero</span></p>
+        </header>
+
+        <main class="main">
+            <section class="add-quest-section">
+                <h2 class="section-title">Nueva Misión</h2>
+                <form id="questForm" class="quest-form">
+                    <input 
+                        type="text" 
+                        id="questInput" 
+                        class="quest-input"
+                        placeholder="Escribe tu misión aquí..."
+                        required
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="btn btn-add">
+                        Agregar
+                    </button>
+                </form>
+            </section>
+
+            <section class="quest-list-section">
+                <h2 class="section-title">Misiones Activas</h2>
+                <div class="quest-list-container">
+                    <ul id="questList" class="quest-list">
+                    </ul>
+                    <p id="emptyMessage" class="empty-message">
+                        No hay misiones activas.<br>
+                        ¡Comienza tu aventura agregando una nueva misión!
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total de Misiones:</span>
+                    <span class="stat-value" id="totalQuests">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completadas:</span>
+                    <span class="stat-value" id="completedQuests">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Pendientes:</span>
+                    <span class="stat-value" id="pendingQuests">0</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="quests.js"></script>
+</body>
+</html>

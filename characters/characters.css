@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.characters-screen {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../assets/ui/background-characters.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.characters-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
+.character-card {
+    position: relative;
+    flex: 0 1 auto;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class-banner {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: -20px;
+    z-index: 10;
+    position: relative;
+}
+
+.class-banner img {
+    width: 280px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.class-banner:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.class-banner:active {
+    transform: scale(0.98);
+}
+
+.card-content {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .characters-screen {
+        padding: 1rem 0.5rem;
+    }
+
+    .characters-container {
+        gap: 2rem;
+    }
+    
+    .card-content {
+        width: 240px;
+        height: 350px;
+    }
+    
+    .class-banner img {
+        width: 190px;
+    }
+
+    .class-banner {
+        margin-bottom: -15px;
+    }
+}
+
