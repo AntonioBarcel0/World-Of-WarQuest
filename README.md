@@ -1,0 +1,60 @@
+# World of WarQuest - Gestor de Misiones RPG
+
+Un gestor de tareas temático estilo RPG medieval con diseño pixel art retro, donde tendremos un libro de misiones para cada clase de personaje (Guerrero, Pícaro, Mago).
+<img width="1472" height="704" alt="logo" src="https://github.com/user-attachments/assets/893c86c0-3415-4a30-b18d-ef6758554e0a" />
+
+
+## 🎮 Descripción
+
+World of WarQuest es una aplicación web de gestión de tareas con temática de fantasía medieval oscura y estética pixel art. Los usuarios pueden seleccionar una clase de personaje y gestionar sus misiones de forma independiente, con persistencia de datos en el navegador.
+
+## ✨ Características
+
+- **🎨 Diseño Pixel Art Retro**: Interfaz completa con estética de juegos clásicos 8-bit/16-bit
+- **⚔️ 3 Clases de Personajes**: Guerrero, Pícaro y Mago, cada uno con su propio libro de misiones
+- **💾 Persistencia de Datos**: Las misiones se guardan en LocalStorage separadas por personaje
+- **✅ Sistema de Tareas Completo**: 
+  - Agregar nuevas misiones
+  - Marcar misiones como completadas
+  - Eliminar misiones
+  - Estadísticas en tiempo real
+- **📱 Responsive Design**: Adaptado para móviles y desktop
+
+## 🛠️ Tecnologías utilizadas
+
+- **HTML5**: Estructura semántica
+- **CSS3**: Estilos pixel art con animaciones
+- **JavaScript (Vanilla)**: Lógica de la aplicación sin frameworks
+- **LocalStorage API**: Persistencia de datos del navegador
+- **Google Fonts**: Press Start 2P (pixel art) y MedievalSharp
+
+## 📁 Estructura del proyecto
+
+to-do-list/
+├── index.html # Redirección a Main
+├── assets/
+│ └── avatars/
+  └── ui/
+├── main/
+│ ├── main.html # Pantalla de inicio
+│ ├── main.css
+│ └── main.js
+├── characters/
+│ ├── characters.html # Selección de personaje
+│ ├── characters.css
+│ └── characters.js
+└── quests/
+├── quests.html # Gestor de misiones
+├── quests.css
+└── quests.js
+
+
+## 🚀 Instalación
+
+1. **Clona el repositorio**:
+```bash
+git clone https://github.com/tu-usuario/quest-manager.git
+cd quest-manager
+
+
+
