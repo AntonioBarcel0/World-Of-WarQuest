@@ -1,7 +1,8 @@
 # World of WarQuest - Gestor de Misiones RPG
 
 Un gestor de tareas temático estilo RPG medieval con diseño pixel art retro, donde tendremos un libro de misiones para cada clase de personaje (Guerrero, Pícaro, Mago).
-<img width="1472" height="704" alt="logo" src="https://github.com/user-attachments/assets/893c86c0-3415-4a30-b18d-ef6758554e0a" />
+
+<img width="722" height="345" alt="logo-removebg-preview" src="https://github.com/user-attachments/assets/cd77f690-be34-4844-bd98-34ff39dcf678" />
 
 
 ## 🎮 Descripción
